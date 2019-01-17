@@ -1,0 +1,624 @@
+// Files to Import
+
+@import "variables";
+
+/***** Styles *****/
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-family: "Courier New", Courier, Arial, Helvetica, sans-serif;
+  background: $offWhite;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.pageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 100vw;
+  padding: 0;
+}
+
+section {
+  width: 80vw;
+  font-size: 1.5em;
+}
+
+.sectionHeading {
+  font-size: 2.5em;
+  background: $darkGrey;
+  color: #f4f4f4;
+  padding: 10px;
+  border-bottom: 5px solid $goldenBrown;
+  text-transform: uppercase;
+  margin-bottom: 75px;
+}
+
+.subHeading {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  margin: 100px 0 50px 0;
+}
+
+/**** Navigation *****/
+
+.toggleMenu {
+  position: fixed;
+  padding: 15px 20px 15px 15px;
+  height: 100vh;
+  min-height: 100vh;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgba(17, 17, 17, 0.9);
+  z-index: 1;
+  font-size: 4em !important;
+  opacity: 0;
+}
+
+.toggleIcon {
+  margin-top: 50vh;
+}
+
+.sidebarMenu {
+  position: fixed;
+  width: 250px;
+  margin-left: 0px;
+  overflow: hidden;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: rgba(17, 17, 17, 0.9);
+  opacity: 0.9;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.fa-times {
+  right: 10px;
+  top: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+  position: absolute;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.navigation {
+  margin: 20px 0;
+  display: block;
+  width: 200px;
+  margin-left: 0px;
+  padding-bottom: 30px;
+  list-style: none;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content:space-around;
+}
+
+.navItem {
+  font-weight: 200;
+  padding: 12px 0;
+  box-sizing: border-box;
+  font-size: 1.5em;
+  color: #fff;
+  border-bottom: solid 1px #fff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.navIcon {
+  padding-right: 10px;
+}
+
+.navLink {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.5;
+  }
+}
+
+.hideMenu {
+  margin-left: -250px;
+}
+
+.opacityOne {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+/**** Landing Section *****/
+
+#landing {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../img/background3.jpg');
+  repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px $darkGrey;
+  border-bottom: 5px solid $goldenBrown;
+  animation-duration: 2s;
+  margin-bottom: 100px;
+
+  .landingHeading
+  {
+    font-size: 6em;
+  }
+  h5
+  {
+    font-size: 2.5em;
+  }
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border: 8px solid $goldenBrown;
+  }
+}
+
+//**** My Work Section ****//
+.card-title {
+  font-weight: bold;
+  margin: 15px;
+}
+
+.projectBtn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #fff;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 30px;
+  box-shadow: 3px 5px #333333;
+  font-weight: bold;
+  color: #fff;
+  font-size: .8em;
+  text-shadow: 2px 5px 5px #333333;
+  cursor: pointer;
+}
+
+.cardContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer .box {
+  box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.8);
+}
+
+.cardContainer .box .projectDetails .content {
+  text-align: center;
+}
+
+#guideLink {
+  text-decoration: none;
+  color: yellow;
+}
+/***** Skills Section *****/
+
+#skillsSection h1{
+  visibility: hidden;
+  animation-duration: 2s;
+}
+
+#tableContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableHeader {
+  text-align: center;
+}
+
+td {
+  padding: 15px;
+}
+
+table, th, td {
+  border: 1px solid #000;
+}
+
+#skillsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  #skillsList {
+    list-style: none;
+    .skillsItem {
+      display: flex;
+      align-items:  center;
+      margin-bottom: 50px;
+      .skillsLogo {
+        margin-right: 20px;
+      }
+      .skillsName {
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+dl {
+  visibility: hidden;
+  animation-duration: 2s;
+  margin-top: 50px;
+}
+
+.skillsList {
+  font-size: 1.4em;
+  margin: 10px;
+  text-decoration: underline $goldenBrown;
+}
+.skillsDef {
+  margin-bottom: 50px;
+}
+
+/***** About Me Section *****/
+
+#aboutMeSection  {
+  margin-bottom: 50px;
+
+  #aboutMeHeader {
+    visibility: hidden;
+    animation-duration: 2s;
+    margin-top: 50px;
+  }
+
+  p {
+    visibility: hidden;
+    animation-duration: 2s;
+    margin-top: 50px;
+  }
+}
+
+//**** Footer Section ****//
+
+footer {
+  width: 100vw;
+  background: $darkGrey;
+  color: #f4f4f4;
+  padding: 0;
+  padding-top: 15px;
+  margin: 0;
+  border-top: solid 5px $goldenBrown;
+}
+
+.contactContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 15px;
+  padding-left: 10px;
+  flex-flow: column;
+  margin-bottom: 15px;
+}
+
+#linksContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#linkedInLink {
+  color: rgb(0, 127, 178);
+}
+
+#gitHubLink {
+  color: rgb(102, 43, 129);
+}
+
+#twitterLink {
+  color: rgb(0, 172, 237);
+}
+
+#copyright {
+  grid-area: copyright;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .8em;
+}
+
+#email {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/***** Media Queries *****/
+@media(min-width: 1030px) {
+  #cardContainer {
+    align-items: center;
+    visibility: hidden;
+  }
+
+  .cardContainer .box {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .cardContainer .box .imgBox {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cardContainer .box .imgBox img {
+    width: 100%;
+    height: 100%;
+    transition: 2s;
+    transform: scale(1.2);
+  }
+
+  .cardContainer .box:hover .imgBox img {
+    transform: scale(1);
+  }
+
+  .cardContainer .box .projectDetails {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(17, 17, 17, 0.7);
+    transition: 1s;
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(1.5);
+    color: #fff;
+  }
+
+  .cardContainer .box:hover .projectDetails {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+
+  .cardContainer .box .projectDetails .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+  }
+}
+
+@media(max-width: 1029px) {
+  .cardContainer .box {
+    border: 1px solid #000;
+    width: 400px;
+    height: auto;
+    margin: 0 15px 50px 0;
+  }
+
+  .cardContainer .box .projectDetails {
+    background: rgb(51, 51, 51);
+    color: #fff;
+  }
+
+  .cardContainer .box .imgBox {
+    height: 400px;
+  }
+
+  .content {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+
+  .projectBtn {
+    margin-bottom: 20px;
+  }
+}
+
+@media(max-width: 1100px) {
+  #landing {
+    .landingHeading {
+      font-size: 5em;
+    }
+  }
+}
+
+@media (max-width: 975px) {
+  .marginContainer {
+    margin-left: 30px;
+  }
+
+  .skillsLogo {
+    height: 150px;
+  }
+
+  #landing {
+    .landingHeading {
+      font-size: 4em;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .sidebarMenu {
+    width: 150px;
+    font-size: .7em;
+  }
+
+  .fa-times {
+    font-size: 2em !important;
+  }
+
+  .mainNav a{
+    font-size: 15px;
+  }
+
+  .imageContainer {
+    img {
+      height: 150px;
+      width: 150px;
+    }
+  }
+  #landing {
+    .landingHeading {
+      font-size: 3em;
+    }
+  }
+
+  .skillsLogo {
+    height: 100px;
+  }
+
+  .skillsName {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggle {
+    display: block;
+  }
+
+  .toggleMenu {
+    font-size: .8em !important;
+    padding: 12px;
+    margin: 0px;
+  }
+
+  .mainNav ul {
+    width: 100%;
+    display: none;
+  }
+
+  .mainNav ul li {
+    display: block;
+    text-align: center;
+  }
+
+  .active {
+    display: block !important;
+  }
+
+  #landing h5 {
+    font-size: 1.5em;
+  }
+
+  th {
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 650px) {
+  #landing {
+    .landingHeading
+    {
+      font-size: 3em;
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 620px) {
+  td {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .skillsLogo {
+    height: 150px;
+  }
+}
+
+@media(max-width: 480px) {
+  .cardContainer .box {
+    width: 300px;
+  }
+
+  .cardContainer .box .imgBox {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cardContainer .box .imgBox img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  .sidebarMenu {
+    font-size: .5em;
+  }
+
+  .sectionHeading {
+    font-size: 1.5em;
+  }
+
+  .subHeading {
+    font-size: 1.4em;
+  }
+
+  .projectBtn {
+    font-size: .5em;
+    margin: 10px;
+  }
+
+  .card-text {
+    margin: 10px;
+    font-size: .7em;
+  }
+
+  .skillsLogo {
+    height: 100px;
+  }
+
+  .skillsList {
+    font-size: 1.2em;
+  }
+
+  .skillsDef {
+    font-size: .8em;
+  }
+
+  #aboutMeSection p {
+    font-size: .8em;
+  }
+}
